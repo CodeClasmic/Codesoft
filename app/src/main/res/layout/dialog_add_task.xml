@@ -1,0 +1,86 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#959598"
+    android:padding="20dp">
+
+    <!-- Task Title Input -->
+    <EditText
+        android:id="@+id/etTaskTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_task_title"
+        android:inputType="textCapSentences"
+        android:padding="12dp"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <!-- Task Description Input -->
+    <EditText
+        android:id="@+id/etTaskDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etTaskTitle"
+        android:layout_marginTop="12dp"
+        android:gravity="top"
+        android:hint="@string/enter_task_description"
+        android:inputType="textMultiLine"
+        android:padding="12dp"
+        android:textColor="#020202"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Due Date and Time Display -->
+    <TextView
+        android:id="@+id/tvDueDateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etTaskDescription"
+        android:layout_marginTop="14dp"
+        android:text="No Due Date Set"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="italic" />
+
+    <!-- Due Date and Time Picker Button -->
+    <Button
+        android:id="@+id/btnPickDueDateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvDueDateTime"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#3AAFA9"
+        android:text="@string/set_due_date_time"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <!-- High Priority Toggle -->
+    <Switch
+        android:id="@+id/switchPriority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnPickDueDateTime"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="14dp"
+        android:text="@string/high_priority"
+        android:textColor="#333333"
+        android:textSize="16sp"
+        android:thumbTint="#DF1313"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <!-- Add Task Button -->
+    <Button
+        android:id="@+id/btnAddTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/switchPriority"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#5D46E1"
+        android:padding="12dp"
+        android:text="@string/add"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+</RelativeLayout>
