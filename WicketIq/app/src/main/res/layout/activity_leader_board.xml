@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/leadactivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8CC3DD"
+    android:padding="16dp">
+
+    <!-- Leaderboard Title Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/leaderboard_title_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#3949AB"
+        android:elevation="4dp"
+        android:padding="16dp"
+        android:radius="16dp"
+        app:cardCornerRadius="30sp"
+        app:contentPadding="10sp">
+
+        <TextView
+            android:id="@+id/leaderboardtextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/aclonica"
+            android:text="@string/leaderboard"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Rank 1 User Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/top_user_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/leaderboard_title_card"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#FFEB3B"
+        android:elevation="6dp"
+        android:padding="16dp"
+        android:radius="16dp"
+        app:cardCornerRadius="100dp"
+        app:contentPadding="5sp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/rank1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingTop="8dp"
+                android:text="@string/rank_1"
+                android:textColor="#212121"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/top_user_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/top_user"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile" />
+
+            <TextView
+                android:id="@+id/top_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingTop="8dp"
+                android:text="Top Player"
+                android:textColor="#212121"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/top_user_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingTop="4dp"
+                android:text="Total Score: 9999"
+                android:textColor="#D32F2F"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Leaderboard Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/leaderboard_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_user_card"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#FFFFFF"
+        android:elevation="4dp"
+        android:padding="16dp"
+        android:radius="16dp"
+        app:cardCornerRadius="20sp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_leaderboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EFDCAC"
+            android:nestedScrollingEnabled="false"
+            android:padding="8dp" />
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
