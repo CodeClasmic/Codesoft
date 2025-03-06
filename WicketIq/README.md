@@ -12,23 +12,6 @@ WicketIQ is an interactive **Cricket Quiz App** designed for cricket enthusiasts
 - **Score Tracking & Updates** (Scores are updated after each quiz session)
 - **One Attempt Per Question** (Users can only attempt each question once per session)
 
-## 📥 Installation & Setup
-1. **Clone the Repository**
-   ```sh
-   git clone https://github.com/your-username/WicketIQ.git
-   cd WicketIQ
-   ```
-2. **Open in Android Studio**
-   - Launch **Android Studio**
-   - Open the **WicketIQ** project
-3. **Setup Firebase**
-   - Create a Firebase project at [Firebase Console](https://console.firebase.google.com/)
-   - Enable **Authentication (Email/Password)**
-   - Enable **Firestore Database**
-   - Download and add `google-services.json` to `app/` directory
-4. **Run the App**
-   - Connect an **Android device** or use an **emulator**
-   - Click **Run ▶** in Android Studio
 
 ## 🎯 How "Attempt Only Once" Works
 Each question can be **attempted only once** using the following logic:
