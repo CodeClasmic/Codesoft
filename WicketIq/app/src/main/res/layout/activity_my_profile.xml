@@ -1,0 +1,105 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#318286"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Profile Card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:background="#3375E6"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#B2B19A"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Profile Picture -->
+            <ImageView
+                android:id="@+id/profileImageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/profile"
+                android:contentDescription="@string/continue_as_guest"
+                android:elevation="4dp"
+                android:scaleType="centerCrop" />
+
+            <!-- Username -->
+            <EditText
+                android:id="@+id/usernameEditText"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:background="#F8F4F8"
+                android:enabled="false"
+                android:gravity="center"
+                android:inputType="textPersonName"
+                android:padding="5sp"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="LabelFor" />
+
+            <!-- Email -->
+            <TextView
+                android:id="@+id/emailTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Total Score -->
+            <EditText
+                android:id="@+id/totalScoreEditText"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:background="#F8F6F6"
+                android:enabled="false"
+                android:gravity="center"
+                android:inputType="number"
+                android:padding="5sp"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="LabelFor" />
+
+            <!-- Edit Profile Button -->
+            <Button
+                android:id="@+id/editProfileButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="#052630"
+                android:text="@string/edit_profile"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Logout Button -->
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="324dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@android:color/holo_red_light"
+        android:fontFamily="@font/aclonica"
+        android:text="@string/logout"
+        android:textColor="@android:color/white"
+        android:textScaleX="1.2" />
+</LinearLayout>

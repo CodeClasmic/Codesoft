@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/spl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F0E1"
+    android:gravity="center"
+    android:paddingBottom="100dp">
+
+    <!-- App Logo / Splash Image -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/splash"
+        app:srcCompat="@drawable/splashscreen"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp" />
+
+    <!-- Login Button -->
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        android:layout_below="@id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:paddingVertical="12dp"
+        android:paddingHorizontal="24dp" />
+
+    <!-- Register Button -->
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        android:layout_below="@id/btnLogin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:paddingVertical="12dp"
+        android:paddingHorizontal="24dp" />
+
+    <!-- Guest Button -->
+
+</RelativeLayout>
